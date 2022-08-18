@@ -1,0 +1,9 @@
+[package]
+org = "choreo"
+name = "mediation.rewrite_resource_path"
+version = "0.1.0"
+distribution = "2201.1.0"
+keywords=["choreo-apim-mediation-policy"]
+
+[build-options]
+observabilityIncluded = true
