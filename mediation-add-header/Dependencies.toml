@@ -242,6 +242,18 @@ dependencies = [
 
 [[package]]
 org = "ballerina"
+name = "test"
+version = "0.0.0"
+scope = "testOnly"
+dependencies = [
+	{org = "ballerina", name = "jballerina.java"}
+]
+modules = [
+	{org = "ballerina", packageName = "test", moduleName = "test"}
+]
+
+[[package]]
+org = "ballerina"
 name = "time"
 version = "2.2.2"
 dependencies = [
@@ -282,6 +294,7 @@ name = "mediation.add_header"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "test"},
 	{org = "ballerinai", name = "observe"},
 	{org = "choreo", name = "mediation"}
 ]
