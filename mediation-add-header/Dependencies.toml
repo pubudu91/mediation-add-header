@@ -9,7 +9,7 @@ dependencies-toml-version = "2"
 [[package]]
 org = "ballerina"
 name = "auth"
-version = "2.3.1"
+version = "2.3.0"
 dependencies = [
 	{org = "ballerina", name = "crypto"},
 	{org = "ballerina", name = "jballerina.java"},
@@ -98,7 +98,7 @@ version = "0.0.0"
 [[package]]
 org = "ballerina"
 name = "jwt"
-version = "2.3.1"
+version = "2.3.0"
 dependencies = [
 	{org = "ballerina", name = "cache"},
 	{org = "ballerina", name = "crypto"},
@@ -197,7 +197,7 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "oauth2"
-version = "2.3.1"
+version = "2.3.0"
 dependencies = [
 	{org = "ballerina", name = "cache"},
 	{org = "ballerina", name = "crypto"},
@@ -291,7 +291,7 @@ modules = [
 [[package]]
 org = "choreo"
 name = "mediation.add_header"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "test"},
