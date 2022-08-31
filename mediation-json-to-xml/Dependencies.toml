@@ -293,7 +293,7 @@ modules = [
 [[package]]
 org = "choreo"
 name = "mediation.json_to_xml"
-version = "0.1.0"
+version = "0.1.2"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "mime"},
