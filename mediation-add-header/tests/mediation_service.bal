@@ -10,7 +10,7 @@ service on new http:Listener(9090) {
 
         do {
             {
-                var x = check addHeader_In(req, mediationCtx, "foo", "Foo");
+                var x = check addHeader_In(mediationCtx, req, "foo", "Foo");
 
                 if x is false {
                     check caller->respond(http:INTERNAL_SERVER_ERROR);
@@ -25,7 +25,7 @@ service on new http:Listener(9090) {
             backendResponse = check ep->execute(mediationCtx.httpMethod, mediationCtx.resourcePath, req, targetType = http:Response);
 
             {
-                var x = check addHeader_Out(<http:Response>backendResponse, req, mediationCtx, "bar", "Bar");
+                var x = check addHeader_Out(mediationCtx, req, <http:Response>backendResponse, "bar", "Bar");
 
                 if x is false {
                     check caller->respond(http:INTERNAL_SERVER_ERROR);
@@ -42,7 +42,7 @@ service on new http:Listener(9090) {
             errFlowResponse.statusCode = http:STATUS_INTERNAL_SERVER_ERROR;
 
             {
-                var v = addHeader_Fault(errFlowResponse, e, backendResponse, req, mediationCtx, "baz", "Baz");
+                var v = addHeader_Fault(mediationCtx, req, backendResponse, errFlowResponse, e, "baz", "Baz");
 
                 if v is false|error {
                     check caller->respond(errFlowResponse);
